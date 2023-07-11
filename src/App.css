@@ -1,0 +1,264 @@
+.Single{
+  display: flex;
+}
+.card-row{
+  width: 100vw;
+  height: 40em;
+  display:flex;
+  justify-content: center;
+  display: none;
+}
+.card-row0-entering{
+  width: 100vw;
+  height: 40em;
+  display:flex;
+  justify-content: center;
+  animation-name: entering;
+  animation-timing-function: ease-out;
+  animation-duration: 1s;
+  --a: 100vw;
+  --b: 0vw;
+}
+.card-row0-out{
+  width: 100vw;
+  height: 40em;
+  display:flex;
+  justify-content: center;
+  animation-name: out;
+  animation-timing-function: ease-in-out;
+  animation-duration: 1s;
+  --c: 0vw;
+  --d: -100vw;
+  transform: translateX(100vw);
+}
+.card-row1-entering{
+  width: 100vw;
+  height: 40em;
+  display:flex;
+  justify-content: center;
+  animation-name: entering;
+  animation-timing-function: ease-out;
+  animation-duration: 1s;
+  --a: 0;
+  --b: -100vw;
+  transform: translateX(var(--b));
+}
+.card-row1-out{
+  width: 100vw;
+  height: 40em;
+  display:flex;
+  justify-content: center;
+  animation-name: out;
+  animation-timing-function: ease-in-out;
+  animation-duration: 1s;
+  --c: 0vw;
+  --d: -100vw;
+  transform: translateX(100vw);
+}
+.card-row2-entering{
+  width: 100vw;
+  height: 40em;
+  display:flex;
+  justify-content: center;
+  animation-name: entering;
+  animation-timing-function: ease-out;
+  animation-duration: 1s;
+  --a: 0;
+  --b: -100vw;
+  transform: translateX(var(--b));
+}
+.card-row2-out{
+  width: 100vw;
+  height: 40em;
+  display:flex;
+  justify-content: center;
+  animation-name: out;
+  animation-timing-function: ease-in-out;
+  animation-duration: 1s;
+  --c: -100vw;
+  --d: -200vw;
+  transform: translateX(100vw);
+}
+.card0{
+  background-color: rgb(255, 255, 255,.2);
+  box-shadow: 0 4px 30px rgb(40, 40, 40);
+  backdrop-filter: blur(3px);
+  width: 28em;
+  height: 36em;
+  margin: 2em;
+  border-radius: 0.75em;
+  animation-name: hovering;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: solid 0.5em rgb(40, 40, 40);
+}
+.card1{
+  background-color: rgb(255, 255, 255,.2);
+  box-shadow: 0 4px 30px rgb(61, 10, 119);
+  backdrop-filter: blur(3px);
+  width: 28em;
+  height: 36em;
+  margin: 2em;
+  border-radius: 0.75em;
+  animation-name: hovering;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: solid 0.5em rgb(61, 10, 119);
+}
+.card2{
+  background-color: rgb(255, 255, 255,.2);
+  box-shadow: 0 4px 30px rgb(73, 57, 47);
+  backdrop-filter: blur(3px);
+  width: 28em;
+  height: 36em;
+  margin: 2em;
+  border-radius: 0.75em;
+  animation-name: hovering;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: solid 0.5em rgb(73, 57, 47);
+}
+
+/* .card:hover{
+  --width: 31em;
+  --height: 40em;
+} */
+
+@keyframes hovering{
+  0%{
+    transform: translateY(0px);
+    width: var(--width,28em);
+    height: var(--height,36em); 
+  }
+  50%{
+    transform: translateY(-5px);
+    width: var(--width,28em);
+    height: var(--height,36em); 
+  }
+ 100%{
+  transform: translateY(0px);
+  width: var(--width,28em);
+  height: var(--height,36em); 
+ }
+}
+
+.ourMonsterText{
+  color:white;
+  font-size: 3rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  margin: 0px;
+  position: absolute;
+  top: 1.5rem;
+  z-index: 2;
+
+}
+
+.ourMonsterImage{
+  width: 90%;
+}
+
+.ourMonsterElement{
+  width: 10%;
+  position: absolute;
+  top: 2rem;
+  right: 1rem;
+  z-index: 2;
+}
+.ourMonsteHeader0{
+  width: 100%;
+  height: 4em;
+  background-color: rgb(40,40,40);
+  backdrop-filter: blur(3px);
+  position: absolute;
+  top: 1.25em;
+  z-index: 1;
+}
+.ourMonsteHeader1{
+  width: 100%;
+  height: 4em;
+  background-color: rgb(61, 10, 119);
+  backdrop-filter: blur(3px);
+  position: absolute;
+  top: 1.25em;
+  z-index: 1;
+}
+.ourMonsteHeader2{
+  width: 100%;
+  height: 4em;
+  background-color: rgb(73, 57, 47);
+  backdrop-filter: blur(3px);
+  position: absolute;
+  top: 1.25em;
+  z-index: 1;
+}
+
+@keyframes out{
+  0%{
+    transform: translateX(var(--c));
+  }
+
+  100%{
+    transform: translateX(var(--d));
+  }
+}
+@keyframes entering{
+  0%{
+    transform: translateX(var(--a));
+  }
+  100%{
+    transform: translateX(var(--b));
+  }
+}
+.Continent{
+  position: absolute;
+  top: 0;
+  z-index: 0;
+  height: 100vh;
+  width: 100vw;
+  background-image: url('../src/assets/dark-fantasy.jpg');
+  background-size: cover;
+
+  animation: mymove 12s;
+  animation-delay: 4s;
+  animation-iteration-count: infinite;
+  transition-timing-function: cubic-bezier(1.000, 0.005, 1.000, 0.280);
+}
+@keyframes mymove{
+  0%{ 
+    background-color:rgba(0, 0, 0, 1); 
+    background-image: url('../src/assets/dark-fantasy.jpg');
+  } 
+  16.7%{ background-color:rgba(0, 0, 0, 0.5); }
+  33.4%{
+     background-color:rgba(0, 0, 0, 1); 
+     background-image: url('../src/assets/BlueLand.jpg');
+    } 
+  50.1%{ background-color:rgba(0, 0, 0, 0.5); }
+  66.8%{ 
+    background-color:rgba(0, 0, 0, 1); 
+    background-image: url('../src/assets/marketbroke.jpg');
+    background-repeat: no-repeat;
+  } 
+  83.5% {background-color:rgba(0, 0, 0, 0.5); }
+  100%{ 
+    background-color:rgba(0, 0, 0, 1); 
+    background-image: url('../src/assets/dark-fantasy.jpg');
+  } 
+  /* 0% { background-image: url('https://images.unsplash.com/photo-1582201943021-e8e5cb6dedc2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1562&q=80'); }
+  50% { background-color:rgba(0, 0, 0, 0.5); }
+  51% { background-image: url('https://images.unsplash.com/photo-1582480356444-60ca00301659?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2001&q=80'); }
+  100% { background-color:rgba(0, 0, 0, 1); } */
+}
